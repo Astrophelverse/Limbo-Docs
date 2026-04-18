@@ -1,48 +1,35 @@
 Business Source License 1.1
 
-Licensor:             Astrophel (astrophel2)
-Licensed Work:        Limbo v2
+Licensor:             Astrophel (@astrophel2)
+Licensed Work:        Limbo
                       Copyright (C) 2025 Astrophel
-Additional Use Grant: You may use the Licensed Work for non-commercial
-                      personal or research purposes only.
+Additional Use Grant: Non-commercial personal and research use only.
 Change Date:          2028-01-01
 Change License:       MIT
 
 ---
 
-Parameters
-
-Licensor:             Astrophel
-Licensed Work:        Limbo — Smart Contract Security Auditing Bot
-Additional Use Grant: None beyond the terms stated herein.
-
----
-
 Terms
 
-The Licensor hereby grants you the right to copy, modify, create
-derivative works, redistribute, and make non-production use of the
-Licensed Work.
-
-The Licensor may make an Additional Use Grant, above, permitting
-limited production use.
+The Licensor grants you the right to copy, modify, create derivative
+works, redistribute, and make non-production use of the Licensed Work.
 
 Effective on the Change Date, or the fourth anniversary of the first
 publicly available distribution of a specific version of the Licensed
-Work under this License, whichever comes first, the Licensor hereby
-grants you rights under the terms of the Change License, and the
-rights granted in the paragraph above terminate.
+Work under this License, whichever comes first, the Licensor grants
+you rights under the terms of the Change License, and the rights
+granted in the paragraph above terminate.
 
 If your use of the Licensed Work does not comply with the requirements
 currently in effect as described in this License, you must purchase a
-commercial license from the Licensor, its affiliated entities, or
-authorized resellers, or you must refrain from using the Licensed Work.
+commercial license from the Licensor or refrain from using the
+Licensed Work.
 
 All copies of the original and modified Licensed Work, and derivative
 works of the Licensed Work, are subject to this License.
 
 This License does not grant you any right in any trademark or logo of
-Licensor or its affiliates.
+the Licensor.
 
 TO THE EXTENT PERMITTED BY APPLICABLE LAW, THE LICENSED WORK IS
 PROVIDED ON AN "AS IS" BASIS. LICENSOR HEREBY DISCLAIMS ALL WARRANTIES
@@ -52,13 +39,14 @@ NON-INFRINGEMENT, AND TITLE.
 
 ---
 
-What This Means In Plain English
+In plain language:
 
-- You CAN read, study and learn from this code
-- You CAN run it locally for personal/research use
-- You CAN submit issues and contribute
-- You CANNOT deploy it commercially without a license from Astrophel
-- You CANNOT resell or white-label Limbo
-- On 2028-01-01 this code becomes fully open source under MIT
+  You CAN   read, study and learn from this code
+  You CAN   run it locally for personal or research use
+  You CAN   submit issues and contribute
+  You CANNOT deploy it commercially without a license from Astrophel
+  You CANNOT resell or white-label Limbo without permission
 
-For commercial licensing: contact @astrophel2 on Telegram
+  On 2028-01-01 this code becomes fully open source under MIT.
+
+For commercial licensing: @astrophel2 on Telegram

@@ -1,25 +1,19 @@
-# LIMBO v2
+# LIMBO
 ### *Your contract won't leave the same.*
 
-Limbo is a premium Telegram bot that audits smart contracts automatically. Protocols submit code or a ZIP, pay USDT, and receive a dark premium PDF audit report — no humans, no waiting, fully automated.
+Limbo is an automated smart contract security auditing bot built in Rust, delivered through Telegram. Protocols submit Solidity source or a project ZIP, pay USDT, and receive a premium PDF audit report — fully automated, no humans required for Small and Pro tiers.
 
---- 
+---
 
-## What's New In v2
+## How It Works
 
-- **ZIP upload** — audit entire protocol repos, not just single files
-- **Streaming extractor** — skips node_modules to prevent OOM on free tier
-- **Correlation engine** — cross-validates findings across all tools, scores confidence
-- **Foundry PoC verification** — actually runs exploits to confirm findings are real
-- **Polygon + Arbitrum primary** — Limbo auto-covers gas fees, ETH optional
-- **5/10/12 confirmation thresholds** — no fake payment exploits
-- **Encrypted private keys** — never stored plain in memory, auto-wiped after sweep
-- **Auto-sweep** — USDT moves to your wallet automatically after scan
-- **Admin bypass** — your Telegram ID gets free scans forever
-- **Contract blacklist** — protect your own contracts
-- **Enterprise bot intake** — full two-way communication through the bot, your identity stays hidden
-- **Hard timeouts** — Mythril/Echidna can't OOM kill the server
-- **Interactive installer** — one script configures everything
+```
+/start → submit contract → choose tier → pay USDT
+  → tools run in parallel → correlation engine validates
+  → Foundry verifies exploits → AI explains everything
+  → PDF delivered → funds swept automatically
+  → LimboRewards token issued
+```
 
 ---
 
@@ -28,40 +22,28 @@ Limbo is a premium Telegram bot that audits smart contracts automatically. Proto
 | Layer | Technology |
 |---|---|
 | Bot | Rust + Teloxide |
-| Async | Tokio |
-| Static Analysis | Slither |
+| Async runtime | Tokio |
+| Static analysis | Slither |
 | Fuzzing | Echidna (protocol-aware invariants) |
-| Symbolic Execution | Mythril |
-| Formal Verification | Halmos |
-| PoC Generation + Verification | Foundry |
-| Correlation Engine | Custom Rust |
-| AI Layer | Gemini 3 Flash (→ Claude Haiku at scale) |
+| Symbolic execution | Mythril |
+| Formal verification | Halmos |
+| PoC generation + verification | Foundry |
+| Correlation engine | Custom Rust |
+| AI layer | Gemini Flash → Claude Haiku at scale |
 | Payments | ethers-rs on-chain USDT monitoring |
-| Key Security | AES-256-GCM + zeroize |
+| Key security | AES-256-GCM + zeroize |
 | PDF | printpdf |
+| LimboRewards | Chainlink VRF |
 
 ---
 
-## Install
+## Tiers
 
-```bash
-git clone https://github.com/yourname/limbo
-cd limbo
-chmod +x install.sh
-./install.sh
-```
-
-The script installs all tools and asks you 11 questions. That's it.
-
----
-
-## Pricing
-
-| Tier | Price | Engine | Output |
+| Tier | Price | Depth | LimboRewards Tokens |
 |---|---|---|---|
-| Small | $50 USDT | Gemini Flash basic | PDF with findings + fixes |
-| Pro | $150 USDT | Gemini Flash deep | PDF + Foundry PoCs |
-| Enterprise | Custom | Max depth + manual | Full audit + your review |
+| Small | $50 USDT | Static, fuzzing, correlation, AI | 1 |
+| Pro | $150 USDT | Everything + Foundry PoC verification | 3 |
+| Enterprise | Custom | Everything + manual review | 10 |
 
 ---
 
@@ -75,50 +57,56 @@ The script installs all tools and asks you 11 questions. That's it.
 
 ---
 
-## Bot Flow
+## Install
 
+```bash
+git clone https://github.com/astrophel2/limbo
+cd limbo
+chmod +x install.sh
+./install.sh
 ```
-/start
-  → Paste address / Solidity source / upload .zip
-  → Choose tier
-  → Choose network
-  → Send USDT to generated address
-  → Payment confirmed on-chain automatically
-  → All tools run in parallel with hard timeouts
-  → Correlation engine cross-validates findings
-  → Foundry verifies exploits are real
-  → AI enriches with explanations + PoCs + fixes
-  → PDF delivered
-  → Funds swept to your wallet automatically
-  → "Your contract has been to Limbo."
-```
+
+The installer asks 11 questions and configures everything.
 
 ---
 
-## PDF Sections
+## PDF Structure
 
 ```
-Cover               Protocol, tier, risk score, finding counts
-Executive Summary   AI-written protocol overview
+Cover               Risk score, finding counts, protocol metadata
+Executive summary   AI-written protocol overview and risk assessment
 CONFIRMED           Foundry-verified real exploits
-HIGH CONFIDENCE     2+ tools agreed, not yet verified
-SINGLE TOOL         One tool found it, needs human review
+HIGH CONFIDENCE     2+ tools agreed — fix before mainnet
+SINGLE TOOL         One tool flagged it — human review recommended
 FALSE POSITIVES     Filtered out, listed for transparency
 Sign-off            "Your contract has been to Limbo."
 ```
 
 ---
 
+## LimboRewards
+
+Every paid scan issues a LimboRewards draw token. When a milestone is reached, Chainlink VRF selects a winner on-chain and pays out in USDT automatically. The contract is open source — every draw is publicly verifiable. See [DOCS.md](DOCS.md) for full details.
+
+---
+
 ## Roadmap
 
-- [ ] Multichain Monday — Solana support announcement
-- [ ] HackenProof / Cantina / Sherlock partnership integration
-- [ ] Limbo Verified badge for protocols
+- [ ] Multichain Monday — Solana / Anchor program support
+- [ ] LimboRewards contract deployment
+- [ ] Limbo Verified badge for audited protocols
+- [ ] Partnership integrations — Cantina, Sherlock, HackenProof, Cyfrin
+- [ ] Referral program — 15% revenue share
 - [ ] Public risk leaderboard
-- [ ] Referral program (15% cut per referred scan)
-- [ ] Switch to Claude Haiku 4.5 at scale
-- [ ] v4 — Announcement + channel management system
+- [ ] API access for CI/CD integration
+
+---
+
+## License
+
+Business Source License 1.1 — source-available, non-commercial use permitted. Converts to MIT on 2028-01-01. See [LICENSE](LICENSE).
 
 ---
 
 *Powered by Astrophel — powered by stardust 💀*
+*Contact: @astrophel2 on Telegram*
