@@ -1,5 +1,5 @@
 # LIMBO
-### *Your contract won't leave the same.*
+### *Your contract won't leave the same*
 
 Limbo is an automated smart contract security auditing bot built in Rust, delivered through Telegram. Protocols submit Solidity source or a project ZIP, pay USDT, and receive a premium PDF audit report — fully automated, no humans required for Small and Pro tiers.
 
