@@ -1,5 +1,5 @@
 # Limbo Documentation
-### Your contract won't leave the same.
+### Your contract won't leave the same
 
 ---
 
