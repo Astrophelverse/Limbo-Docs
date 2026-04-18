@@ -239,7 +239,7 @@ Zero manual intervention for Small and Pro tiers. Zero persistent storage of sen
 8.  Sweep signed with decrypted key
 9.  Key zeroized from memory immediately
 10. USDT arrives in operations wallet
-11. LimboRewards token issued
+11. LimboRewards token issued.
 ```
 
 ### 6.3 Confirmation Thresholds
